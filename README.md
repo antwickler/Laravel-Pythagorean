@@ -1,1 +1,1 @@
-# Laravel-Pythagorean
+# Laravel

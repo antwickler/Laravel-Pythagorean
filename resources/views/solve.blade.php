@@ -12,31 +12,25 @@
       <table width="500" border="0" align="center">
         <tbody>
           <tr>
-            <td>
-              <fieldset>
-                <h3 align="center">From equation:&nbsp;&nbsp;&nbsp; a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></h3>
-                <h3 align="center">
-                  <%
-                    int a = Integer.parseInt(request.getParameter("valueA"));
-                    int b = Integer.parseInt(request.getParameter("valueB"));
+            <td><br>
+
+              <h2 align="center">
+                  {{session('valueA')}}<sup>2</sup> +
+                  {{session('valueB')}}<sup>2</sup> = 
+                  c<sup>2</sup> <br><br>
+
+                  {{session('valueA2')}} +
+                  {{session('valueB2')}} = 
+                  c<sup>2</sup> <br><br>
+              </h2>
+              <h1 align="center">  
+                  c<sup>2</sup> = {{session('total')}} <br>
+                  c = {{session('total2')}}
+              </h1>
+              <br><br>
               
-                    out.print("Variable:&nbsp;&nbsp;&nbsp; a = " + a);
-                    out.print(", &nbsp;b = " + b);
-                    out.print("<br>");
-                    out.print("<br> " + a);
-                    out.print("<sup>2</sup> + " + b);
-                    out.print("<sup>2</sup> = c<sup>2</sup>");
-                    out.print("<br>");
-                    out.print("" + Math.pow(a,2));
-                    out.print(" + " + Math.pow(b,2));
-                    out.print(" = c<sup>2</sup>"+"<br>");
-                    out.print("c<sup>2</sup> = " + (Math.pow(a,2)+Math.pow(b,2)));
-                    out.print("<br>"+"c = " + Math.sqrt((Math.pow(a,2)+Math.pow(b,2))));
-                    out.print("<br><br>");
-                  %>
-                    <p align="center"><a href="index.jsp"><input type="submit" value=" Back to Home " style="width:200px;height:40px"></a></p>
-                  </h3>  
-              </fieldset>
+              <h4 align="center"><a href="/calculated">Back to calculate</a></h4>
+                    
             </td>
           </tr>
         </tbody>

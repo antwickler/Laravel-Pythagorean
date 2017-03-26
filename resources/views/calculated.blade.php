@@ -12,16 +12,18 @@
       <table width="500" border="0" align="center">
         <tbody>
           <tr>
-            <td><form method="post" action="/solve">
-              <fieldset>
-                  <p align="center">
-                    <br><br>
-                    Enter value a: &nbsp;<input type="text" name="valueA"><br><br>
-                    Enter value b: &nbsp;<input type="text" name="valueB"><br><br>
-                    <p align="center"><input type="submit" value=" Calculated " style="width:200px;height:40px"></p>
-                  </p>  
-              </fieldset>
-            </form></td>
+            <td><br><br>
+            
+              <form method="post" action="calculate">
+                    <p align="center">
+                      Enter value a: &nbsp;<input type="text" name="valueA"><br><br>
+                      Enter value b: &nbsp;<input type="text" name="valueB"><br><br>
+                      <input type="submit" value="Calculated">
+                      {{ csrf_field() }}
+                    </p>  
+              </form>
+
+            </td>
           </tr>
         </tbody>
       </table>
